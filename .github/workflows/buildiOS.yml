@@ -1,0 +1,17 @@
+name: Xcode - Build and Analyze
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Build iOS App
+    runs-on: macos-latest
+
+    steps:
+              - name: Build iOS Action
+                uses: sparkfabrik/ios-build-action@v2.3.2
+            
